@@ -1,0 +1,153 @@
+body {
+    background: url('https://fitnesscount.000webhostapp.com/files/images/bg_landing_2.png') no-repeat center top;
+}
+
+body.theme-light {
+    background: none;
+}
+
+#body-wrap {
+    border-top: 1px solid transparent;
+}
+
+.header {
+    text-align: center;
+    margin: 30px 0 35px;
+
+    img {
+        max-width: 65%;
+    }
+}
+
+h1 {
+    text-transform: none;
+    font-size: 1.4em;
+    line-height: 1.5em;
+}
+
+/* Index page site feature bubbles */
+section.features {
+    .col {
+        margin: 15px 0 0 0;
+    }
+
+    h2, .blurb, .circle {
+        opacity: 0;
+    }
+
+    .blurb strong {
+        color: $blue;
+    }
+
+    h2 {
+        font-size: 1.6em;
+        margin: 0.4em 0 0.1em 0;
+    }
+
+    .circle {
+        display: inline-block;
+        height: 85px;
+        width: 85px;
+        background: darken($blue, 10%);
+        @include border-radius(50%);       
+        padding: 15px;
+        @include transition(background-color, 400ms, ease-in-out);
+        margin: 5px 0 13px;
+        transform: scale(0);
+    }
+
+    i {
+        margin-top: -2px;
+        display: inline-block;
+        font-size: 4.1em;
+        color: #FFFFFF;
+    }
+
+    > a {
+        color: $text;
+    }
+
+    > a:hover .circle {
+        background: $blue;
+    }
+}
+
+.feature-extra {
+    margin-top: 10px;
+    display: none;
+
+    .col {
+        margin-left: 2% !important;
+
+        &:first-child {
+            margin-left: 0 !important;
+        }
+    }
+}
+
+.home-articles .thumbnail.img {
+    height: 148px !important;
+}
+
+@media (max-width: 550px) {
+    .header img {
+        max-width: 90%;
+    }
+
+    section.features .span_5 {
+        display: none;
+    }
+
+    section.features .span_19 {
+        width: 100%;
+    }
+}
+
+
+.registration > div {
+    background: $bg;
+    padding: 12px;
+    text-align: left;
+
+    article {
+        margin: 0;
+    }
+
+    i {
+        font-size: 1em;
+    }
+
+    h2 {
+        opacity: 1;
+        line-height: 1em;
+        margin: 0;
+    }
+
+    .widget {
+        padding-top: 12px;
+    }
+
+    &.hidden {
+        &:hover {
+            background: $light_bg;
+            cursor: pointer;
+        }
+    }
+
+    &.default-hidden .widget {
+        display: none;
+    }
+}
+
+.no-js {
+    .widget {
+        display: block;
+    }
+}
+
+.no-js section.features {
+    h2, .blurb, .circle {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

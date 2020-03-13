@@ -1,0 +1,16 @@
+<h1>Current Queue Status</h1>
+
+{% for key, member in members %}
+    <h3 class='user-section'></h3>
+    <ul class='user-list plain clr'>
+        {% for user in member.users %}
+        <li>
+            <a href="{{ user.username }}">
+                <span class="right">{{ level.reward|number_format }} pts</span>
+                <span class="level-title">{{ level.title }}</span>
+                <span class="dark small">{{ level.total_completed|number_format }} succeeded</span>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endfor %}

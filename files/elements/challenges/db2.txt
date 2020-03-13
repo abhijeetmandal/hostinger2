@@ -1,0 +1,1 @@
+UPDATE `users_challenges` SET `completed` = now(),attempts=1 WHERE `users_challenges`.`challenge_id` in (6,13,19,26);

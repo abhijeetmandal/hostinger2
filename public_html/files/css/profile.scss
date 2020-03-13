@@ -1,0 +1,425 @@
+.profile {
+    h1 {
+        margin-bottom: 6px;
+        margin-right: 4px;
+        display: inline-block;
+        font-size: 1.8em;
+    }
+
+    .button-friend {
+        width: 105px;
+        text-align: center;
+        &.removefriend:hover {
+            background: $msg_error;
+        }
+    }
+
+    .button.block {
+        &.blocked {
+            background: $msg_error;
+        }
+
+        &:hover {
+            background: $msg_error;
+        }
+    }
+
+    .progress-container {
+        width: 100%;
+        background: $bg;
+
+        .progress {
+            background-color: $green;
+
+            background-image: repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(0,0,0,.15) 10px, rgba(0,0,0,.15) 20px);
+
+            color: $white;
+            text-align: right;
+            font-weight: bold;
+
+            span {
+                padding: 1px 3px;
+                display: inline-block;
+            }
+        }
+    }
+
+    ul {
+        list-style: none;
+
+        &.medals {
+
+            li {
+                display: block;
+                padding: 2px 5px;
+                float: left;
+                margin: 0 4px 3px 0;
+            }
+        }
+
+        &.friends-list {
+            li {
+                width: 24%;
+                margin-right: 1%;
+                float: left;
+
+                figure {
+                    position: relative;
+                    margin-bottom: 2px;
+
+                    img {
+                        display: block;
+                    }
+
+                    /* HOVER STYLE BELOW BLOCK */
+
+                    figcaption {
+                        z-index: 0;
+                        box-shadow: 0 0 0 0 $light_bg;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: opacity 0.1s ease 0s, width 0.1s ease 0s, box-shadow 0.1s ease 0s;
+                        background: $light_bg;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        padding-left: 55px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        padding-right: 8px;
+                        font-size: 0.9em;
+
+                        a {
+                            font-weight: bold;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .profile-feed {
+        height: 220px;
+        overflow: hidden;
+
+        li {
+            padding: 2px;
+
+            &:hover {
+                .remove {
+                    display: block;
+                }
+            }
+
+            i {
+                margin-right: 3px;
+            }
+
+            .remove {
+                color: $text_dark;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $red;
+                }
+            }
+        }
+    }
+
+    .profile-details {
+        background: $bg;
+        padding: 8px;
+
+        > ul {
+            &.line1 {
+                margin-bottom: 10px;
+            }
+
+            > li {
+                float: left;
+
+                span {
+                    display: block;
+
+                    &.strong {
+                        color: $white;
+                    }
+                }
+
+                &:not(:last-child) {
+                    margin-right: 18px;
+                }
+            }
+
+            &.social {
+                margin-top: 8px;
+                li {
+                    float: none;
+                    margin-right: 2px;
+                    font-size: 1.1em;
+                    
+                    a {
+                        padding: 3px 2px;
+                        display: inline-block;
+                        color: $text_dark;
+
+                        &:hover {
+                            text-decoration: none;
+                            color: $white;
+                        }
+
+                        i {
+                            width: 15px;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .profile-stats {
+            position: relative;
+            height: 100%;
+
+            #profile-stats-chart {
+                height: 150px;
+                margin-bottom: 16px;
+
+                svg {
+                    stroke: $green;
+
+                    .axis path,
+                    .axis line {
+                        fill: none;
+                        stroke: $text_dark;
+                        shape-rendering: crispEdges;
+                    }
+
+                    .axis text {
+                        font-size: 10px;
+                        stroke: $text_dark;
+                    }
+                }
+            }
+
+            .profile-stats-extra {
+                display: none;
+
+                .more > ul > li {
+                    padding: 6px;
+                    &:nth-child(odd) {
+                        background: $light_bg;
+                    }
+
+                    time {
+                        margin-left: 4px;
+                        font-size: 0.9em;
+                    }
+                }
+
+                .more > ul > li > ul {
+                    display: inline-block;
+                    margin-left: 10px;
+
+                    > li {
+                        display: inline;
+                        padding-right: 6px;
+
+                        a.progress_2 {
+                            color: green;
+                        }
+                        a.progress_1,
+                        a.progress_0 {
+                            color: red;
+                        }
+                    }
+                }
+            }
+
+            a.close {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 0.9em;
+                &:hover {
+                    text-decoration: none;
+                    i {
+                        color: $green;
+                    }
+                }
+
+                i {
+                    color: $white;
+                }
+            }
+
+            .loading {
+                    position: absolute;
+                    top: 23px;
+                    left: 50%;
+                    margin-left: -8px;
+                }
+        }
+    }
+
+    .profile-extra {
+        margin-top: 10px;
+        word-wrap: break-word;
+
+        .medal a {
+            color: $black;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .profile-music {
+        height: 102px;
+        &.loading {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        ul li {
+            height: 17px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}
+
+
+.no-js {
+    .profile {
+
+        .profile-feed {
+            overflow: auto;
+
+            .remove {
+                display: none !important;
+            }
+        }
+
+        .music {
+            display: none;
+        }
+    }
+}
+
+.no-touch .profile .friends-list li:hover {
+    img {
+        z-index: 100;
+        position: relative;
+    }
+
+    figcaption {
+        z-index: 99;
+        box-shadow: 0 0 0 4px $light_bg;
+        opacity: 1;
+        width: auto;
+    }
+}
+
+
+#friends-search {
+    border: 1px solid $dark;
+    height: 25px;
+    padding: 3px;
+    float: right;
+    font-size: 0.9em;
+
+    i {
+        color: $dark;
+        font-size: 15px;
+        margin-top: 0px;
+        display: inline-block;
+    }
+
+    input {
+        width: 180px;
+        border: 0px;
+        height: 100%;
+        padding: 0px;
+        padding-right: 6px;
+
+        &:focus {
+            @include box-shadow($black, 0);
+        }
+    }
+}
+
+
+ul.users-list {
+    list-style: none;
+    margin-bottom: 16px;
+
+    li {
+        margin-right: 6px;
+        float: left;
+
+        > a, > div {
+            position: relative;
+            margin-bottom: 2px;
+            color: $text;
+            display: block;
+
+            &:hover {
+                text-decoration: none;
+                div {
+                    background: $lighter_bg;
+                }
+            }
+
+            img {
+                display: block;
+                width: 48px;
+                position: absolute;
+                top: 4px;
+                left: 4px;
+            }
+
+            div {
+                width: auto;
+                height: 56px;
+                background: $light_bg;
+                overflow: hidden;
+                white-space: nowrap;
+                padding: 5px 12px 6px 60px;
+                font-size: 0.9em;
+
+                span {
+                    font-weight: bold;
+                    color: $white;
+
+                    &.icons {
+                        display: block;
+                        margin-top: 8px;
+                        text-align: center;
+                        a {
+                            margin: 0 3px;
+                            &:hover {
+                                text-decoration: none;
+                                color: $bright_green;
+
+                                .icon-cross {
+                                    color: red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .profile .progress-container {
+        margin-bottom: 12px;
+    }
+}

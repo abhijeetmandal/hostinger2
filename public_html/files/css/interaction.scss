@@ -1,0 +1,1079 @@
+a {
+    text-decoration: none;
+    color: $link;
+    outline: 0;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:active {
+        outline: none;
+    }
+
+    &:focus {
+        outline: none;
+        -moz-outline-style: none;
+    }
+}
+
+html:not(.no-js) a[href^="http://"]:not(.hide-external):not(.stop-external):after,
+html:not(.no-js) a[href^="https://"]:not(.hide-external):not(.stop-external):after {
+    @include icon("\e072");
+
+    vertical-align: top;
+    font-size: 0.8em;
+    padding-left: 2px;
+}
+
+form {
+    @include clearfix();
+
+    fieldset {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+label {
+    margin-bottom: 4px;
+    display: inline-block;
+    // font-weight: bold;
+    // color: $white;
+}
+
+textarea,
+input,
+select,
+.input-icon {
+    border: 1px solid $light_bg;
+    background: none;
+    color: $white;
+    padding: 2px; 
+    margin: 0 0 8px 0;
+    width: 100%;
+        
+    -webkit-transition: -webkit-box-shadow .3s ease-in-out;
+    -moz-transition: -moz-box-shadow .3s ease-in-out;
+    -o-transition: box-shadow .3s ease-in-out;
+      
+    @include border-radius();
+
+    &.error {
+        @include box-shadow(#CC0000);
+        border-color: #990000 !important;
+    }
+
+    &.medium {
+        width: 75%;
+    }
+
+    &.short {
+        width: 50%;
+    }
+
+    &.tiny {
+        width: 25%;
+        min-width: 150px;
+    }
+
+    &:focus {
+        border-color: $lighter_bg;
+        outline: none;
+    }
+
+    /* &:not(.hide-shadow):focus { 
+        @include box-shadow($bright_green);
+    } */
+
+    &:-webkit-autofill {
+        color: black !important;
+    }
+}
+
+input[type="file"] {
+    border: none;
+}
+
+textarea {
+    resize: none;
+    min-height: 140px;
+    max-height: 500px;
+
+    font-size: 0.9em;
+    padding: 6px;
+    margin-bottom: 6px;
+
+    @include border-radius(0);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display:none;
+
+    + label {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+
+        &:before {
+            font-family: 'icomoon';
+            padding-right: 6px;
+            font-size: 13px;   
+        }
+    }
+}
+
+input[type="radio"] + label:before {
+    content: "\e054"; /* circle-blank */
+    color: $dark;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label:before {
+  content: "\e053"; /* circle */
+  color: white;
+}
+
+input[type="checkbox"] + label:before {
+  content: "\e052"; /* check-empty */
+}
+
+input[type="checkbox"]:checked + label:before {
+  content: "\e051"; /* check */
+}
+
+input[type="file"] {
+    width: auto;
+}
+
+.input-icon {
+    padding: 0;
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+
+    i {
+        position: absolute;
+        top: 2px;
+        left: 4px;
+    }
+
+    input {
+        border: none;
+        margin: 0;
+        padding-left: 5px;
+        border-left: 23px solid $light_bg;
+    }
+}
+
+form input.button,
+form input.button:visited {
+    background: $light_bg;
+    border: none;
+    width: auto;
+    font-size: 1.1em;
+    margin: 0px;
+    margin-left: 8px;
+    padding: 2px 8px;
+    
+    @include border-radius(0);
+
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+
+    float: right;
+
+    &:hover {
+        background: $lighter_bg;
+    }
+}
+
+.button {
+    &.left {
+        float: none !important;
+        margin: 0px;
+    }
+}
+
+/* BUTTONS */
+a.button { 
+    background: $light_bg;
+    padding: 4px 8px;
+    margin-left: 8px;
+    margin-top: -4px;
+
+    &:hover {
+        text-decoration: none;
+        background: $lighter_bg;
+    }
+
+    &.button-blank {
+        background: none;
+    }
+
+    &.button-disabled {
+        background: $bg !important;
+        color: $dark !important;
+        cursor: default !important;
+    }
+
+    i {
+        padding-right: 4px;
+    }
+
+    &.icon i {
+        padding-right: 0;
+    }
+
+    &.clean {
+        margin: 0;
+        margin-top: 4px;
+        display: inline-block;
+    }
+}
+
+.theme-light {
+    .button {
+        color: $white;
+    }
+}
+
+#confirmBox a.button.cancel {
+    background: none;
+    color: $dark;
+
+    &:hover {
+        color: $black;
+    }
+}
+
+
+/* SELECT MENU */
+div.select-menu {
+    position: relative;
+    display: inline-block;
+    color: $white;
+    margin-bottom: 2px;
+
+    width: 24%;
+
+    > label {
+        width: 100%;
+        background: $light_bg;
+        padding: 3px 8px 4px 8px;
+        margin-top: -1px;
+
+        -webkit-user-select: none; 
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+
+        &:after {
+            @include icon("\f0d7");
+            margin-top: 1px;
+            float: right;
+        }
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: none;
+            background: $lighter_bg;
+        }
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        z-index: 1000;
+        background: $light_bg;
+        list-style: none;
+
+        li {
+            padding: 4px;
+            &:hover {
+                background: $lighter_bg;
+                cursor: pointer;
+            }
+
+            &.sub:after {
+                @include icon("\f0da");
+                float: right;
+                margin-right: 4px;
+            }
+        }
+    }
+
+    > ul, > div > ul {
+        display: none;
+        -webkit-transition: left 0.1s ease-in-out;
+        -moz-transition: left 0.1s ease-in-out;
+        -o-transition: left 0.1s ease-in-out;
+        transition: left 0.1s ease-in-out;
+
+        ul {
+            top: 0;
+        }
+    }
+
+    > div {
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    &.active {
+        > label {
+            background: $lighter_bg;
+
+            &:after {
+                @include icon("\f0d8");
+            }
+        }
+
+        > div > ul {
+            display: block;
+        }
+    }
+}
+
+
+/* ICON LINKS */
+a.icon-hover {
+    text-decoration: none;
+    color: $text_dark;
+
+    &:hover .icon-lastfm {
+        color: #D51007;
+    }
+}
+
+
+/* TABS */
+ul.tabs {
+    margin-bottom: 16px;
+    @include clearfix();
+    font-size: 1em;
+    background: $bg;
+
+    li {
+        float: left;
+        margin-right: 2px;
+        list-style: none;
+
+        &.right {
+            float: right;
+            margin-left: 2px;
+            margin-right: 0px;
+        }
+
+        a {
+            display: block;
+            padding: 4px 12px;
+            color: $text;
+
+            &:hover {
+                background: $light_bg;
+                color: $white;
+                text-decoration: none;
+            }
+        }
+
+        &.active a {
+            color: $white;
+            background: $lighter_bg;
+        }
+    }
+}
+
+
+/* IMAGES */
+.thumbnail {
+    background: $bg;
+    cursor: pointer;
+    margin-bottom: 14px;
+    position: relative;
+    overflow: hidden;
+    height: 252px;
+    text-decoration: none !important;
+    color: $text;
+
+    &:hover {
+        background: $light_bg;
+
+        &.img:before {
+            background: $green;
+        }
+
+        &.img .caption {
+            background: #000000;
+        }
+    }
+
+    &.img:before {
+        content: attr(data-overlay);
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 128, 0, 0.7);
+        color: $white;
+        padding: 5px 10px;
+    }
+
+    &.img {
+        height: 178px !important;
+    }
+
+    &.img .caption {
+        /* height: 70px; */
+        overflow: hidden;
+        padding: 3px 12px;
+        position: absolute;
+        bottom: 0;
+        height: auto;
+        width: 100%;
+
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .caption {
+        height: 97%;
+        overflow: hidden;
+        padding: 12px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h3 {
+        margin: 0;
+        color: $white;
+        text-align: left;
+    }
+
+    &.img h3 {
+        margin-top: 6px;
+    }
+
+    p {
+        margin: 0;
+        margin-top: 0.4em;
+    }
+}
+
+
+
+/* WYSIWYG */
+.wysiwyg {
+    border: 1px solid $light_bg;
+    position: relative;
+    margin: 0 0 8px;
+
+    ul.controls {
+        background: $light_bg;
+        padding: 0 4px;
+        @include clearfix();
+
+        li {
+            float: left;
+            list-style: none;
+            font-size: 1em;
+            margin: 4px;
+
+            &.right {
+                float: right;
+            }
+
+            &.seperator {
+                padding-right: 4px;
+                margin-right: 2px;
+                border-right: 1px solid $black;
+            }
+
+            &:last-child {
+                border: none;
+            }
+
+            a {
+                display: inline-block;
+                color: $black;
+                font-size: 16px;
+
+                &.strong,
+                &.italic,
+                &.underline,
+                &.strike {
+                    width: 10px;
+                }
+
+                &:hover {
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+
+            &.active a {
+                color: $white;
+            }
+        }
+    }
+
+    textarea, .preview {
+        border: 0px;
+        padding: 6px;
+        margin: 0px;
+    }
+
+    .preview {
+        display: none;
+    }
+
+    .smilies {
+        display: none;
+    }
+
+    .overlay-upload {
+        display: none;
+        position: absolute;
+        top: 28px;
+        left: 0;
+        padding: 8px 30px;
+        width: 100%;
+        background: #000000;
+        background: rgba(0,0,0,0.9);
+
+        .form {
+            text-align: left;
+            width: 400px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+
+.comments .wysiwyg textarea {
+    min-height: 100px;
+}
+
+.no-js .wysiwyg .controls {
+    display: none;
+}
+
+.theme-light {
+    .wysiwyg ul.controls li {
+        a {
+            color: $white;
+        }
+
+        &.active a,
+        a:hover {
+            color: $black;
+        }
+    }
+}
+
+
+
+/* autosuggest */
+ul.autosuggest {
+    list-style: none;
+    border: 1px solid $light_bg;
+    border-width: 1px 0 0 0;
+
+    li a {
+        display: block;
+        padding: 4px;
+
+        &:hover {
+            text-decoration: none;
+            color: $white;
+            background: $bg;
+        }
+
+        i {
+            float: right;
+        }
+    }
+
+    &.autosuggest-alt {
+        width: 50%;
+        border-width: 0 1px 1px;
+        border-color: $lighter_bg;
+        margin-top: -9px;
+    }
+}
+
+
+
+/* share */
+ul.share {
+    list-style: none;
+    overflow: hidden;
+    margin-top: -2px;
+
+    li {
+        float: left;
+
+        a {
+            display: inline-block;
+            padding: 3px 6px 2px 6px;
+
+            span {
+                margin-left: 2px;
+            }
+
+            i.icon-heart {
+                color: #FF0000;
+            }
+
+            &:hover {
+                i {
+                    color: $bright_green;
+                }
+
+                &.favourite i {
+                    color: #FF0000;
+                }
+
+                &.facebook i {
+                    color: #3B5999;
+                }
+
+                &.twitter i {
+                    color: #00ACED;
+                }
+
+                background: $bg;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.no-js ul.share .facebook,
+.no-js ul.share .twitter {
+    display: none;
+}
+
+
+/* PAGINATION */
+div.pagination {
+    margin-top: 16px;
+    background: $bg;
+    width: 100%;
+    text-align: center;
+    cursor: default;
+
+    a {
+        padding: 5px 8px;
+        margin: 0px;
+        color: $white;
+        display: inline-block;
+
+        &.current {
+            background: $black !important;
+        }
+
+        &:hover {
+            background: $green;
+            text-decoration: none;
+        }
+    }
+
+    li {
+        display: inline-block;
+
+        &.inactive {
+            padding: 0px 6px;
+            margin: 0px;
+            color: $white;
+        }
+    }
+}
+
+div.lite-pagination {
+    display: inline-block;
+    margin-left: 4px;
+
+    li {
+        float: left;
+
+        a {
+            position: relative;
+            top: 4px;
+
+            display: inline-block;
+            height: 19px;
+            min-width: 19px;
+            text-align: center;
+
+            font-size: 0.9em;
+            border: 1px solid $light_bg;
+            padding: 1px 4px;
+            margin-left: 2px;
+
+            &:hover {
+                text-decoration: none;
+                background: $light_bg;
+            }
+        }
+    }
+}
+
+
+
+/* CHAT BAR */
+#chat-bar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    /* overflow: hidden; */
+
+    height: 28px;
+    width: 150px;
+    max-width: 100%;
+    border-top: 3px solid $red;
+
+    .connect-msg {
+        text-align: center;
+        padding: 15px;
+        margin-top: 5px;
+    }
+
+    &.connected {
+        border-color: $green;
+
+        .connect-msg {
+            display: none;
+        }
+
+        .chat-bar-title i {
+            display: inline;
+        }
+    }
+
+    background: $black;
+
+    transition: height 0.3s, width 0.3s;
+
+    &.show {
+        height: 275px !important;
+        max-height: 75%;
+        width: 350px;
+
+        input {
+            display: block;
+        }
+
+        .chat-bar-title .unread {
+            display: none;
+        }
+    }
+
+    .chat-bar-title {
+        cursor: pointer;
+        color: $white;
+        background: $light_bg;
+        padding: 4px 6px;
+
+        i {
+            display: none;
+        }
+
+        i:hover {
+            color: red;
+            cursor: pointer;
+        }
+
+        .unread {
+            background: $green;
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            top: -20px;
+            left: 0;
+
+            &.hide {
+                display: none;
+            }
+        }
+    }
+
+    input {
+        position: absolute;
+        border: none;
+        border-top: 1px solid $bg;
+        border-left: 2px solid $bg;
+        border-right: 2px solid $bg;
+        background: $black;
+        bottom: 0;
+        left: 0;
+        padding: 4px 6px;
+        margin-bottom: 0;
+        display: none;
+    }
+}
+
+#chat-bar, #chat-main {
+    .chat-container {
+        border-left: 2px solid $bg;
+        border-right: 2px solid $bg;
+        padding: 4px;
+        height: 222px;
+
+        ul li {
+            list-style: none;
+            padding: 2px 0;
+
+            span {
+                color: $red;
+                padding-right: 2px;
+            }
+
+            &.info {
+                font-style: italic;
+                color: $dark;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #chat-bar {
+        height: 28px;
+    }
+}
+
+
+/* MODAL */
+.modal-overlay {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000000;
+
+    .modal {
+        background: $white;
+        color: $text_dark;
+        left: 0;
+        margin: 0 auto;
+        position: fixed;
+        right: 0;
+        top: 15%;
+        width: 600px;
+        z-index: 1000001;
+
+        .modal-header {
+            padding: 20px 20px 10px;
+            cursor: move;
+
+           -moz-user-select: none;
+           -khtml-user-select: none;
+           -webkit-user-select: none;
+
+            h2 {
+                color: $dark;
+            }
+
+            a.modal-close {
+                background: $dark;
+                padding: 15px;
+                position: absolute;
+                right: 0;
+                top: 0;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $bright_green;
+                }
+            }
+        }
+
+        .modal-content {
+            padding: 0px 20px 20px;
+
+            h3 {
+                color: $dark;
+            }
+
+            ul {
+                margin-bottom: 10px;
+
+                li {
+                    padding-left: 20px;
+                    padding-bottom: 10px;
+
+                    label {
+                        margin-bottom: 2px;
+                    }
+
+                    input[type="radio"] {
+                        display: inline-block;
+                        float: left;
+                        margin-left: -20px;
+                        margin-top: 2px;
+                        padding-top: 10px;
+                        width: auto;
+                    }
+
+                    textarea {
+                        color: #404040;
+                        margin-top: 10px;
+                        max-height: 100px;
+                        min-height: 100px;
+                    }
+                }
+            }
+
+            input[type=submit] {
+                padding: 4px 8px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-overlay,
+    .modal-overlay .modal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+    }
+}
+
+
+
+
+/*scrollbar themes*/
+.mCustomScrollBox>.mCSB_scrollTools .mCSB_draggerRail{
+    width:4px;
+    background: darken($bg, 2%);
+    -webkit-border-radius:1px;
+    -moz-border-radius:1px;
+    border-radius:1px;
+}
+.mCustomScrollBox:hover>.mCSB_scrollTools .mCSB_draggerRail {
+    background: $bg;
+}
+.mCustomScrollBox>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    width:4px;
+    background: darken($white, 35%);
+    -webkit-border-radius:1px;
+    -moz-border-radius:1px;
+    border-radius:1px;
+}
+.mCustomScrollBox:hover>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    background: $white;
+}
+.mCustomScrollBox.mCSB_horizontal>.mCSB_scrollTools .mCSB_draggerRail{
+    width:100%;
+    height:4px;
+    margin:6px 0;
+}
+.mCustomScrollBox.mCSB_horizontal>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    width:100%;
+    height:4px;
+    margin:6px auto;
+}
+.mCustomScrollBox>.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
+    background:rgba(255,255,255,0.85);
+}
+.mCustomScrollBox>.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCustomScrollBox>.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+    background:rgba(255,255,255,0.9);
+}
+.mCustomScrollBox>.mCSB_scrollTools .mCSB_buttonUp{
+    background-position:-32px 0;
+}
+.mCustomScrollBox>.mCSB_scrollTools .mCSB_buttonDown{
+    background-position:-32px -20px;
+}
+.mCustomScrollBox>.mCSB_scrollTools .mCSB_buttonLeft{
+    background-position:-40px -40px;
+}
+.mCustomScrollBox>.mCSB_scrollTools .mCSB_buttonRight{
+    background-position:-40px -56px;
+}
+
+
+/* basic scrollbar styling */
+/* vertical scrollbar */
+.mCSB_container{
+    width:auto;
+    margin-right:8px;
+    overflow:hidden;
+}
+.mCSB_container.mCS_no_scrollbar{
+    margin-right:0;
+}
+.mCS_disabled>.mCustomScrollBox>.mCSB_container.mCS_no_scrollbar,
+.mCS_destroyed>.mCustomScrollBox>.mCSB_container.mCS_no_scrollbar{
+    margin-right:12px;
+}
+.mCustomScrollBox>.mCSB_scrollTools{
+    width:4px;
+    height:100%;
+    top:0;
+    right:0;
+}
+.mCSB_scrollTools .mCSB_draggerContainer{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0; 
+    height:auto;
+}
+.mCSB_scrollTools a+.mCSB_draggerContainer{
+    margin:20px 0;
+}
+.mCSB_scrollTools .mCSB_draggerRail{
+    width:2px;
+    height:100%;
+    margin:0 auto;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+}
+.mCSB_scrollTools .mCSB_dragger{
+    cursor:pointer;
+    width:100%;
+    height:30px;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    width:4px;
+    height:100%;
+    margin:0 auto;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    text-align:center;
+}
+.mCSB_scrollTools .mCSB_buttonUp,
+.mCSB_scrollTools .mCSB_buttonDown{
+    display:block;
+    position:relative;
+    height:20px;
+    overflow:hidden;
+    margin:0 auto;
+    cursor:pointer;
+}
+.mCSB_scrollTools .mCSB_buttonDown{
+    top:100%;
+    margin-top:-40px;
+}
+.mCustomScrollBox{
+    -ms-touch-action:none; /*MSPointer events - direct all pointer events to js*/
+}

@@ -1,0 +1,113 @@
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('5', 'reward', '7');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('5', 'form', 'myform');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('5', 'answer', '[{"method":"POST","name":"category","value":"plank"},{"method":"POST","name":"challenge","value":"4"},{"method":"POST","name":"token","value":"40"}]');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('5', 'description', '40 sec plank');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('5', 'uptime', '40');
+
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('8', 'reward', '7');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('8', 'form', 'myform');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('8', 'answer', '[{"method":"POST","name":"category","value":"plank"},{"method":"POST","name":"challenge","value":"8"},{"method":"POST","name":"token","value":"45"}]');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('8', 'description', '45 sec plank');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('8', 'uptime', '45');
+
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('13', 'reward', '8');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('13', 'form', 'myform');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('13', 'answer', '[{"method":"POST","name":"category","value":"plank"},{"method":"POST","name":"challenge","value":"13"},{"method":"POST","name":"token","value":"90"}]');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('13', 'description', '90 sec plank');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('13', 'uptime', '90');
+
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('14', 'reward', '8');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('14', 'form', 'myform');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('14', 'answer', '[{"method":"POST","name":"category","value":"plank"},{"method":"POST","name":"challenge","value":"14"},{"method":"POST","name":"token","value":"90"}]');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('14', 'description', '90 sec plank');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('14', 'uptime', '90');
+
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('15', 'reward', '8');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('15', 'form', 'myform');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('15', 'answer', '[{"method":"POST","name":"category","value":"plank"},{"method":"POST","name":"challenge","value":"15"},{"method":"POST","name":"token","value":"90"}]');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('15', 'description', '90 sec plank');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('15', 'uptime', '90');
+
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('16', 'reward', '9');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('16', 'form', 'myform');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('16', 'answer', '[{"method":"POST","name":"category","value":"plank"},{"method":"POST","name":"challenge","value":"16"},{"method":"POST","name":"token","value":"120"}]');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('16', 'description', '120 sec plank');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('16', 'uptime', '120');
+
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('17', 'reward', '9');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('17', 'form', 'myform');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('17', 'answer', '[{"method":"POST","name":"category","value":"plank"},{"method":"POST","name":"challenge","value":"17"},{"method":"POST","name":"token","value":"120"}]');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('17', 'description', '120 sec plank');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('17', 'uptime', '120');
+
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('18', 'reward', '10');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('18', 'form', 'myform');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('18', 'answer', '[{"method":"POST","name":"category","value":"plank"},{"method":"POST","name":"challenge","value":"18"},{"method":"POST","name":"token","value":"150"}]');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('18', 'description', '150 sec plank');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('18', 'uptime', '150');
+
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('20', 'reward', '10');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('20', 'form', 'myform');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('20', 'answer', '[{"method":"POST","name":"category","value":"plank"},{"method":"POST","name":"challenge","value":"20"},{"method":"POST","name":"token","value":"150"}]');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('20', 'description', '150 sec plank');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('20', 'uptime', '150');
+
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('21', 'reward', '10');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('21', 'form', 'myform');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('21', 'answer', '[{"method":"POST","name":"category","value":"plank"},{"method":"POST","name":"challenge","value":"21"},{"method":"POST","name":"token","value":"150"}]');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('21', 'description', '150 sec plank');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('21', 'uptime', '150');
+
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('22', 'reward', '11');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('22', 'form', 'myform');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('22', 'answer', '[{"method":"POST","name":"category","value":"plank"},{"method":"POST","name":"challenge","value":"22"},{"method":"POST","name":"token","value":"180"}]');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('22', 'description', '180 sec plank');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('22', 'uptime', '180');
+
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('23', 'reward', '11');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('23', 'form', 'myform');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('23', 'answer', '[{"method":"POST","name":"category","value":"plank"},{"method":"POST","name":"challenge","value":"23"},{"method":"POST","name":"token","value":"180"}]');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('23', 'description', '180 sec plank');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('23', 'uptime', '180');
+
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('24', 'reward', '12');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('24', 'form', 'myform');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('24', 'answer', '[{"method":"POST","name":"category","value":"plank"},{"method":"POST","name":"challenge","value":"24"},{"method":"POST","name":"token","value":"210"}]');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('24', 'description', '210 sec plank');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('24', 'uptime', '210');
+
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('25', 'reward', '12');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('25', 'form', 'myform');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('25', 'answer', '[{"method":"POST","name":"category","value":"plank"},{"method":"POST","name":"challenge","value":"25"},{"method":"POST","name":"token","value":"210"}]');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('25', 'description', '210 sec plank');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('25', 'uptime', '210');
+
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('27', 'reward', '13');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('27', 'form', 'myform');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('27', 'answer', '[{"method":"POST","name":"category","value":"plank"},{"method":"POST","name":"challenge","value":"27"},{"method":"POST","name":"token","value":"240"}]');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('27', 'description', '240 sec plank');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('27', 'uptime', '240');
+
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('28', 'reward', '13');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('28', 'form', 'myform');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('28', 'answer', '[{"method":"POST","name":"category","value":"plank"},{"method":"POST","name":"challenge","value":"28"},{"method":"POST","name":"token","value":"240"}]');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('28', 'description', '240 sec plank');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('28', 'uptime', '240');
+
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('29', 'reward', '14');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('29', 'form', 'myform');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('29', 'answer', '[{"method":"POST","name":"category","value":"plank"},{"method":"POST","name":"challenge","value":"29"},{"method":"POST","name":"token","value":"270"}]');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('29', 'description', '270 sec plank');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('29', 'uptime', '270');
+
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('30', 'reward', '15');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('30', 'form', 'myform');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('30', 'answer', '[{"method":"POST","name":"category","value":"plank"},{"method":"POST","name":"challenge","value":"29"},{"method":"POST","name":"token","value":"300"}]');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('30', 'description', '300 sec plank');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('30', 'uptime', '300');
+
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('6', 'description', 'Rest Day');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('13', 'description', 'Rest Day');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('19', 'description', 'Rest Day');
+INSERT INTO `challenges_data` (`challenge_id`, `key`, `value`) VALUES ('26', 'description', 'Rest Day');
+

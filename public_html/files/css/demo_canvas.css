@@ -1,0 +1,21 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23-May-2019, 17:00:09
+    Author     : abhijeet
+*/
+
+     canvas1 {
+    	position: absolute;
+    	left: 40%;
+    	top: 47%;
+        width: 400px;
+        height: 400px;
+    	margin-left: -157px; /* This is half the width */
+    	margin-top: -170px; /* This is half the height */
+    }
+    
+

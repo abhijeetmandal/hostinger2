@@ -1,0 +1,144 @@
+.highlight {
+    background: $bg;
+    padding: 10px;
+    margin: 8px 0 4px 0;
+}
+
+.donate {
+    background: $bg;
+    padding: 10px;
+
+ 
+    input {
+        float: none !important;
+        min-width: 150px !important;
+        width: 25% !important;
+
+        &.button {
+            padding: 4px !important;
+            margin: 0 !important;
+        }
+    }   
+
+    label {
+        margin-top: 6px;
+        margin-bottom: 0;
+    }
+}
+
+.medals-list .new-section:not(:first-child) {
+    margin-top: 24px;
+}
+
+
+.main-scoreboard {
+    li {
+        list-style: none;
+        overflow: hidden;
+        margin: 2px 0;
+        padding: 1px 4px;
+
+        i.icon-heart {
+            margin-left: 4px;
+            color: #A00;
+        }
+
+        span.position {
+            text-align: center;
+            padding-right: 8px;
+           // width: 12px;
+            display: inline-block;
+        }
+
+        img {
+            width: 20px;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        &.first, &.second, &.third {
+            background: $lighter_bg;
+            padding: 4px;
+            line-height: 16px;
+        }
+
+        &.second, &.third {
+            background: $light_bg;
+        }
+
+        &.third {
+            background: $bg;
+            margin-bottom: 4px;
+        }
+
+        &.highlight {
+            background: $green !important;
+            color: white;
+        }
+
+        &.extra {
+            margin-top: 24px;
+        }
+    }
+}
+
+
+table tr td.new {
+    color: red;
+}
+
+table tr td.old {
+    color: $green;
+}
+
+table.ticket-conversation {
+    display: block;
+
+    tbody, tr, td {
+        display: block;
+    }
+
+    td {
+        padding: 6px;
+
+        i {
+            margin-left: 4px;
+
+            &.icon-firefox-2 {
+                color: #E66000;
+            }
+
+            &.icon-chrome {
+                color: #4DB749;
+            }
+
+            &.icon-safari {
+                color: grey;
+            }
+
+            &.icon-opera {
+                color: #F21A1A;
+            }
+
+            &.icon-IE {
+                color: #00AADB;
+            }
+
+            &.js-on {
+                color: green;
+            }
+
+            &.js-off {
+                color: red;
+            }
+        }
+    }
+}
+
+
+.version-history {
+    h2 {
+        margin-bottom: 0;
+        margin-top: 1.2em;
+    }
+}

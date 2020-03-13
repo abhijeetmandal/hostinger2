@@ -1,0 +1,277 @@
+ErrorDocument 403 /error.php
+ErrorDocument 404 /error.php
+
+php_value include_path ".:../files/"
+php_value short_open_tag "1"
+php_value date.timezone 'Asia/Kolkata'
+
+
+
+# ------------------------------------------------------------------------------
+# | Redirects |
+# ------------------------------------------------------------------------------
+#RewriteEngine On
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW SSL_REDIRECT:crushit.xyz
+RewriteEngine on
+#RewriteCond %{HTTPS} off
+#RewriteCond %{HTTP_HOST} ^crushit.xyz$
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE SSL_REDIRECT:crushit.xyz
+
+#RewriteCond %{HTTPS} off
+#RewriteCond %{HTTP_HOST} ^(www\.)?crushit.xyz$
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+#RewriteCond %{SERVER_PORT} 80
+#RewriteCond %{HTTP_HOST} ^(www\.)?fitnesscount.000webhostapp\.com
+#RewriteRule ^(.*)$ https://fitnesscount.000webhostapp.com/$1 [R,L]
+
+RewriteCond %{HTTPS} off
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^(www\.)?crushit\....$
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+#STUFF
+RewriteRule ^terms/?$ /terms.php [L]
+RewriteRule ^privacy/?$ /privacy.php [L]
+RewriteRule ^faq/?$ /faq.php [L]
+RewriteRule ^contact/?$ /contact.php [L]
+RewriteRule ^conduct/?$ /conduct.php [L]
+RewriteRule ^policy/?$ /policy.php [L]
+
+#IMAGES
+RewriteRule ^users/images/(.+)/(.+)/(.+)$ /files/vendor/slir/?h=$1&c=$2&i=$3 [L]
+RewriteRule ^images/(.+)/(.+)/(.+)$ /files/vendor/slir/?h=$1&c=$2&i=$3 [L]
+RewriteRule ^files/media/images/articles/(.+)/(.+)/(.+).jpg$ /files/vendor/slir/?i=$3 [L]
+
+#MODELS
+RewriteRule ^/files/models/fileoutput/?$ /files/models/fileoutput.php?%{QUERY_STRING}
+RewriteRule ^/files/models/fileoutput/(.+)$ /files/models/fileoutput.php?filename=$1&%{QUERY_STRING}
+
+#NEWS
+RewriteRule ^news/?$ /news.php?%{QUERY_STRING}
+RewriteRule ^news/(.+)$ /news.php?slug=$1&%{QUERY_STRING}
+
+#ARTICLES
+RewriteRule ^articles/contributors$ /articles/contributors.php?%{QUERY_STRING} [L]
+RewriteRule ^articles/(.+)/(.+)/([0-9]+)$ /articles/index.php?slug=$1/$2&page=$3&%{QUERY_STRING} [L]
+RewriteRule ^articles/(.+)/([0-9]+)$ /articles/index.php?slug=$1&page=$2&%{QUERY_STRING} [L]
+RewriteRule ^articles/([0-9]+)$ /articles/index.php?page=$1&%{QUERY_STRING} [L]
+RewriteRule ^articles/submit$ /articles/me/submit.php?slug=$1&%{QUERY_STRING}
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^articles/(.+)/(.+)$ /articles/index.php?slug=$1/$2&%{QUERY_STRING} [L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^articles/(.+)$ /articles/view.php?slug=$1&%{QUERY_STRING}
+
+#FORUM
+RewriteRule ^forum/(.+)/(.+)/([0-9]+)$ /forum/index.php?slug=$1/$2&page=$3&%{QUERY_STRING} [L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^forum/(.+)/(.+)$ /forum/index.php?slug=$1/$2&%{QUERY_STRING} [L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^forum/(.+)$ /forum/index.php?slug=$1&%{QUERY_STRING}
+
+#LEVELS
+RewriteRule ^levels/b3.php$ /levels/level.php?group=basic+&level=3&%{QUERY_STRING} [L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^levels/(.+)/([a-zA-Z0-9]+)/?$ /levels/level.php?group=$1&level=$2&%{QUERY_STRING} [L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^levels/([a-zA-Z0-9]+)/?$ /levels/index.php?group=$1&%{QUERY_STRING} [L]
+RewriteRule ^levels/([a-zA-Z0-9\+]+)/?$ /levels/index.php?category=$1&%{QUERY_STRING} [L]
+RewriteRule ^levels/main/extras/ssap.xml$ /levels/extras/ssap.xml [L]
+
+#CHALLENGES
+#RewriteRule ^levels/([a-zA-Z0-9]+)/?$ /levels/index.php?group=$1&%{QUERY_STRING} [L]
+RewriteRule ^challenges/(.+)/([a-zA-Z0-9]+)/?$ /challenges/challenge.php?group=$1&challenge=$2&%{QUERY_STRING} [L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^challenges/([a-zA-Z0-9\+]+)/?$ /challenges/index.php?category=$1&%{QUERY_STRING} [L]
+
+#ADMIN
+RewriteRule ^admin/levels$ /admin/levels.php?%{QUERY_STRING} [L]
+
+RewriteRule ^public_html/camera/gum/index.html$ /camera/gum/index.html?%{QUERY_STRING} [L]
+
+
+# USERS
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^user/(.+)/friends$ /user/index.php?user=$1&friends&%{QUERY_STRING} [L]
+RewriteRule ^user/(.+)/userbar.png$ /user/userbar.php?user=$1 [L]
+RewriteRule ^user/userbar.png$ /user/userbar.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^user/(.+)$ /user/index.php?user=$1&%{QUERY_STRING}
+
+# PAYU
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^payu/(.+)$ /payu/index.php?payu=$1&%{QUERY_STRING}
+
+# INBOX
+RewriteRule ^inbox/([0-9]+)$ /inbox/?view=$1&%{QUERY_STRING} [L]
+RewriteRule ^inbox/compose$ /inbox/?compose&%{QUERY_STRING} [L]
+
+# API
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^api/?$ /handle_api.php?%{QUERY_STRING}
+
+# INBOX
+RewriteRule ^inbox/([0-9]+)$ /inbox/?view=$1&%{QUERY_STRING} [L]
+RewriteRule ^inbox/compose$ /inbox/?compose&%{QUERY_STRING} [L]
+
+
+# ------------------------------------------------------------------------------
+# | Proper MIME types for all files |
+# ------------------------------------------------------------------------------
+
+<IfModule mod_mime.c>
+
+  # Audio
+    AddType audio/mp4 m4a f4a f4b
+    AddType audio/ogg oga ogg
+
+  # JavaScript
+    # Normalize to standard type (it's sniffed in IE anyways):
+    # http://tools.ietf.org/html/rfc4329#section-7.2
+    AddType application/javascript js jsonp
+    AddType application/json json
+
+  # Video
+    AddType video/mp4 mp4 m4v f4v f4p
+    AddType video/ogg ogv
+    AddType video/webm webm
+    AddType video/x-flv flv
+
+  # Web fonts
+    AddType application/font-woff woff
+    AddType application/vnd.ms-fontobject eot
+
+    # Browsers usually ignore the font MIME types and sniff the content,
+    # however, Chrome shows a warning if other MIME types are used for the
+    # following fonts.
+    AddType application/x-font-ttf ttc ttf
+    AddType font/opentype otf
+
+    # Make SVGZ fonts work on iPad:
+    # https://twitter.com/FontSquirrel/status/14855840545
+    AddType image/svg+xml svg svgz
+    AddEncoding gzip svgz
+
+  # Other
+    AddType application/octet-stream safariextz
+    AddType application/x-chrome-extension crx
+    AddType application/x-opera-extension oex
+    AddType application/x-shockwave-flash swf
+    AddType application/x-web-app-manifest+json webapp
+    AddType application/x-xpinstall xpi
+    AddType application/xml atom rdf rss xml
+    AddType image/webp webp
+    AddType image/x-icon ico
+    AddType text/cache-manifest appcache manifest
+    AddType text/vtt vtt
+    AddType text/x-component htc
+    AddType text/x-vcard vcf
+
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# | UTF-8 encoding |
+# ------------------------------------------------------------------------------
+
+# Use UTF-8 encoding for anything served as `text/html` or `text/plain`.
+AddDefaultCharset utf-8
+
+# Force UTF-8 for certain file formats.
+<IfModule mod_mime.c>
+    AddCharset utf-8 .atom .css .js .json .rss .vtt .webapp .xml
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# | File access |
+# ------------------------------------------------------------------------------
+
+# Block access to directories without a default document.
+# Usually you should leave this uncommented because you shouldn't allow anyone
+# to surf through every directory on your server (which may include rather
+# private places like the CMS's directories).
+
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Block access to hidden files and directories.
+# This includes directories used by version control systems such as Git and SVN.
+
+<IfModule mod_rewrite.c>
+    RewriteCond %{SCRIPT_FILENAME} -d [OR]
+    RewriteCond %{SCRIPT_FILENAME} -f
+    RewriteRule "(^|/)\." - [F]
+</IfModule>
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Block access to backup and source files.
+# These files may be left by some text editors and can pose a great security
+# danger when anyone has access to them.
+
+<FilesMatch "(^#.*#|\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|sw[op])|~)$">
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</FilesMatch>
+
+
+
+php_value session.cookie_httponly true
+
+<ifModule mod_deflate.c>
+    <filesMatch "\.(js|css|php)$">
+        SetOutputFilter DEFLATE
+    </filesMatch>
+</ifModule>
+
+<ifModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 seconds"
+    ExpiresByType text/html "access plus 1 seconds"
+    ExpiresByType image/gif "access plus 2592000 seconds"
+    ExpiresByType image/jpeg "access plus 2592000 seconds"
+    ExpiresByType image/png "access plus 2592000 seconds"
+    ExpiresByType text/css "access plus 604800 seconds"
+    ExpiresByType text/javascript "access plus 216000 seconds"
+    ExpiresByType application/x-javascript "access plus 216000 seconds"
+</ifModule>
+
+<ifModule mod_headers.c>
+    <filesMatch "\\.(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </filesMatch>
+    <filesMatch "\\.(css)$">
+        Header set Cache-Control "max-age=60, public"
+    </filesMatch>
+    <filesMatch "\\.(js)$">
+        Header set Cache-Control "max-age=60, private"
+    </filesMatch>
+    <filesMatch "\\.(xml|txt)$">
+        Header set Cache-Control "max-age=216000, public, must-revalidate"
+    </filesMatch>
+    <filesMatch "\\.(html|htm|php)$">
+        Header set Cache-Control "max-age=1, private, must-revalidate"
+    </filesMatch>
+</ifModule>
+
+<IfModule mod_php4.c>
+    php_value magic_quotes_gpc off
+</IfModule>

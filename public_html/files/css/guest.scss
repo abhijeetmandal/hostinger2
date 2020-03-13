@@ -1,0 +1,45 @@
+#reg_email_2 {
+    display: none;
+}
+
+#reg_email_suggestion {
+    color: $white;
+
+    margin-top: -4px;
+    margin-bottom: 8px;
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    span {
+        color: $green;
+    }
+}
+
+.nav-extra-dropdown {
+	padding: 8px;
+	width: 250px !important;
+}
+
+.nav-extra-dropdown article {
+	margin-bottom: 0;
+}
+
+.nav-extra-dropdown h1 {
+	display: none;
+}
+
+
+.cookies {
+    background: $bg;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: -20px;
+
+    h3 {
+        margin: 0;
+        margin-right: 6px;
+        display: inline-block;
+    }
+}

@@ -1,0 +1,6 @@
+O:8:"stdClass":16:{s:8:"level_id";s:1:"7";s:4:"name";s:1:"3";s:5:"group";s:6:"PUSHUP";s:5:"title";s:14:"PUSHUP Level 3";s:9:"completed";s:1:"0";s:14:"completed_time";s:19:"0000-00-00 00:00:00";s:7:"started";s:19:"2019-05-05 09:01:01";s:8:"attempts";s:1:"0";s:16:"level_before_uri";s:16:"/levels/pushup/1";s:15:"level_after_uri";s:16:"/levels/pushup/4";s:4:"data";a:3:{s:6:"reward";s:2:"50";s:4:"hint";s:58:"[img]https://crushit.fit/files/images/gif/pushup.gif[/img]";s:11:"description";s:245:"Step#1: Take a camera and record your [b]30 push-ups[/b].
+
+Step#2: Upload the video to below mentioned google-drive link.
+[url]https://drive.google.com/drive/folders/1EV2t3dfoNXaPxdYci4yuMpUsJckwTgHC?usp=sharing[/url]
+
+Step#3: Click submit.";}s:5:"count";s:1:"0";s:14:"last_completed";N;s:9:"last_user";N;s:15:"first_completed";N;s:10:"first_user";N;}

@@ -1,0 +1,122 @@
+.settings-profile {
+    > fieldset > label:not(.right):not([for=enter]) {
+        width: 110px;
+        font-weight: bold;
+        color: $white;
+    }
+
+    label.right {
+        cursor: pointer;
+    }
+
+    label[for=enter] {
+        display: none;
+    }
+
+    input,
+    select {
+        margin-bottom: 18px;
+    }
+
+    .input-icon input {
+        margin-bottom: 0;
+    }
+}
+
+
+#upload-drop {
+	border: 1px dashed $lighter_bg;
+    color: $lighter_bg;
+	width: 100%;
+	height: 200px;
+	text-align: center;
+	padding-top: 30px;
+
+	&:hover {
+		border: 1px dashed $white;
+	    color: $white;
+	    cursor: pointer;
+	}
+
+	.action {
+        font-size: 1.5em;
+        padding: 6px;
+        font-weight: bold;
+        i {
+        	display: block;
+            margin-bottom: 6px;
+            font-size: 3em;
+        }
+	}
+}
+
+#upload-form {
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+
+	&.visible {
+		width: auto;
+		height: auto;
+		overflow: auto;
+	}
+}
+
+.gravatar-pic {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+
+    img {
+    	width: 100%;
+    }
+
+    a {
+    	text-align: center;
+        font-size: 1.5em;
+        padding: 6px;
+        font-weight: bold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        padding-top: 50px;
+        text-decoration: none;
+        background: rgba(0,0,0,0.3);
+
+        i {
+        	margin-bottom: 6px;
+            font-size: 3em;
+        }
+    }
+
+    &:hover a {
+        background: #000000;
+        background: rgba(0,0,0,0.8);
+    }
+}
+
+div.warning h3 {
+    background: $red;
+    padding: 6px;
+    margin-bottom: 6px;
+}
+
+div.warning strong {
+    color: #C00;
+}
+
+.no-js {
+	#upload-form {	
+		width: auto;
+		height: auto;
+		overflow: auto;
+	}
+	#upload-drop {
+		display: none;
+	}
+}

@@ -1,0 +1,43 @@
+<?php
+//echo "sss1";
+    $custom_css = array('profile.scss', 'highlight.css', 'confirm.css');
+    $custom_js = array('jquery.confirm.js', 'highlight.js', 'profile.js');
+//echo "realpath ".  realpath("./") ."<br/>";
+    require_once('../../files/init.php');
+//echo "sss2";
+
+    $profile = new profile($_GET['user']);
+//echo "sss3 profile: $profile";
+    if (isset($profile->uid))
+        $app->page->title = $profile->username;
+
+    if (isset($_GET['image'])) {
+        require('userbar.php');
+        die();
+    }
+
+    require_once('../../files/header.php');
+
+    if (!isset($profile->uid)):
+        $app->utils->message("User not found");
+        require_once('../../files/footer.php');
+        die();
+    endif;
+
+    if (isset($_GET['friends']) && count($profile->friendsList)):
+
+        /* FRIENDS LIST STARTS */
+        $profile->getDob = $profile->getDob();
+        echo $app->twig->render('profile_friends.html', array('profile' => $profile));
+
+    else:
+
+        /* USERS PROFILE STARTS */
+        $profile->getDob = $profile->getDob();
+        shuffle($profile->friendsList);
+        echo $app->twig->render('profile.html', array('profile' => $profile));
+
+    endif;
+
+    require_once('../../files/footer.php');
+?>

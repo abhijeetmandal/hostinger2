@@ -1,0 +1,19 @@
+<?php
+	class log {
+		function __construct($app) {
+			$this->app = $app;
+		}
+
+		function add($file, $line) {
+			$file = preg_replace("/[^A-Za-z0-9_-]/", '', $file);
+			
+			$line = '['.date('c').'] ' . $_SERVER['REMOTE_ADDR'] . ' - ' . $line . "\n";
+                        //echo "realpath ".  realpath("./") ."<br/>";
+                       //hard coding $this->app->config['log'] to below
+			if (($fp = @fopen( "../files/logs/" . $file .".log" , 'a')) !== false) {
+				fwrite($fp, $line);
+				fclose($fp);
+			}
+		}
+	}
+?>

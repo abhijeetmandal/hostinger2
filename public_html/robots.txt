@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+Disallow: /contact.php
+Disallow: /inbox/
+Disallow: /levels/
+Disallow: /levels/extras/userpass.txt
+Disallow: /users/
+Disallow: /ctf/8/php/*
+
+User-agent: Mediapartners-Google
+Disallow:
+
+User-agent: Yahoo Pipes 1.0
+Disallow: /
+
+User-agent: KSCrawler
+Disallow: /
+
+User-agent: Spinn3r
+Disallow: /
+
+Sitemap: https://crushit.fit/sitemap.xml

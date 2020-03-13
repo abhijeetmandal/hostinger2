@@ -1,0 +1,46 @@
+https://api.telegram.org/bot873311025:AAFi4OK64SmgTTADx7BdhL7U8rDQDqrf9no/getMe
+https://api.telegram.org/bot873311025:AAFi4OK64SmgTTADx7BdhL7U8rDQDqrf9no/getUpdates
+https://api.telegram.org/bot873311025:AAFi4OK64SmgTTADx7BdhL7U8rDQDqrf9no/sendmessage?chat_id=807175143&text=hi
+
+https://api.telegram.org/bot873311025:AAFi4OK64SmgTTADx7BdhL7U8rDQDqrf9no/setwebhook?url=https://crushit.fit/intergram/2/bothook.php
+
+https://api.telegram.org/bot873311025:AAFi4OK64SmgTTADx7BdhL7U8rDQDqrf9no/deleteWebhook
+
+
+----------
+https://api.telegram.org/bot873311025:AAFi4OK64SmgTTADx7BdhL7U8rDQDqrf9no/getMe	
+ok	true
+result	
+id	873311025
+is_bot	true
+first_name	"CrushIt"
+username	"CrushIt_fitness_bot"
+
+https://api.telegram.org/bot873311025:AAFi4OK64SmgTTADx7BdhL7U8rDQDqrf9no/getUpdates
+ok	true
+result	[]
+
+https://api.telegram.org/bot873311025:AAFi4OK64SmgTTADx7BdhL7U8rDQDqrf9no/getUpdates
+ok	true
+result	
+0	
+update_id	696748736
+message	
+message_id	31
+from	
+id	807175143
+is_bot	false
+first_name	"Abhijeet"
+last_name	"Mandal"
+language_code	"en"
+chat	
+id	807175143
+first_name	"Abhijeet"
+last_name	"Mandal"
+type	"private"
+date	1560327592
+text	"Apple"
+
+
+https://api.telegram.org/bot873311025:AAFi4OK64SmgTTADx7BdhL7U8rDQDqrf9no/sendmessage?chat_id=807175143&text=Mozilla
+https://api.telegram.org/bot873311025:AAFi4OK64SmgTTADx7BdhL7U8rDQDqrf9no/sendmessage?chat_id=807175143&text=Chrome

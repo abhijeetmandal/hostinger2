@@ -1,0 +1,298 @@
+a.facebook-login,
+a.facebook-connect {
+    margin-top: 12px;
+    display: block;
+    background: darken(#3B5999, 5%);
+    padding: 4px 10px;
+
+    color: white;
+
+    &:before {
+        @include icon("\e082");
+        padding-right: 7px;
+    }
+
+    &:hover {
+        background: #3B5999;
+        text-decoration: none;
+    }
+}
+
+a.facebook-connect {
+    margin-top: 8px;
+    margin-bottom: 0px;
+    display: inline-block;
+
+    i.remove {
+        display: none;
+        padding: 2px;
+        line-height: 1em;
+        margin-right: -5px;
+        &:hover {
+            background: darken(#3B5999, 10%);
+        }
+    }
+
+    &:hover i.remove {
+        display: block;
+    }
+}
+
+a.twitter-login {
+    margin-top: 4px;
+    display: block;
+    background: darken(#409FFF, 5%);
+    padding: 4px 6px;
+
+    &:before {
+        @include icon("\e083");
+        padding-right: 4px;
+    }
+
+    &:hover {
+        background: #409FFF;
+        text-decoration: none;
+    }
+}
+
+.widget {
+    margin-bottom: 1.75em;
+
+    &.dashboard-tasks {
+        background: $bg;
+        padding: 8px 6px;
+        margin-bottom: 0.75em;
+
+        .tasks-progress-container {
+            margin-top: 6px;
+            height: 1px;
+            background: $black;
+
+            div {
+                background: $green;
+                height: 1px;
+            }
+        }
+
+    }
+
+    &.dashboard {
+        background: $bg;
+        padding: 12px 6px 0 6px;
+
+        h1 {
+            border: none;
+            text-align: center;
+            margin-bottom: 6px;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            // @include border-radius(50%);
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 4px;
+
+            img {
+                width: 100px;
+            }
+
+            .upload {
+                display: none;
+                color: $white;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100px;
+                background: #000000;
+                background: rgba(0,0,0,0.8);
+                padding-top: 18px;
+                text-decoration: none;
+
+                i {
+                    font-size: 3em;
+                }
+            }
+
+            &:hover .upload {
+                display: block;
+            }
+        }
+
+        ul.user-profile {
+            list-style: none;
+            margin-top: 8px;
+            text-align: left;
+
+            li {
+                padding: 6px 4px;
+                font-weight: bold;
+                color: $white;
+
+                span {
+                    font-weight: normal;
+
+                    &.right span {
+                        background: lighten($bg, 12%);
+                        color: $white;
+                        padding: 1px 6px;
+                        margin-left: 4px;
+                    }
+                }
+
+                &.progress {
+                    padding: 0px;
+                    height: 1px;
+                    background: $black;
+
+                    span {
+                        display: block;
+                        background: $green;
+                        height: 1px;
+                        text-indent: -9000px;
+                    }
+
+                    &.progress-login span {
+                        background: $blue;
+                    }
+                }
+            }
+        }
+    }
+
+    &.feed {
+        .feed_loading {
+            height: 110px;
+            margin-top: 70px;
+        }
+
+        ul {
+            height: 170px;
+            overflow: hidden;
+            position: relative;
+
+            li {
+                list-style: none;
+                overflow: hidden;
+                margin: 2px 0;
+                font-size: 0.9em;
+
+                time {
+                    float: right;
+                    color: darken($text, 20%);
+                }
+
+                div {
+                    overflow: hidden;
+                    o-text-overflow: ellipsis;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    height: 15px;
+                }
+
+                i {
+                    color: $white;
+                    margin-right: 6px;
+                    display: inline-block;
+                    width: 12px;
+                    text-align: center;
+
+                    &.colour-1 {
+                        color: #693909;
+                    }
+                    &.colour-2 {
+                        color: silver;
+                    }
+                    &.colour-3 {
+                        color: #FBB829;
+                    }
+                    &.colour-4 {
+                        color: $green;
+                    }
+                }
+
+                a {
+                    color: darken($text, 5%);
+                }
+
+                a.user {
+                    display: inline-block;
+
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 85px;
+                    height: 16px;
+                    margin-right: 12px;
+                    float: left;
+                }
+
+                &:hover {
+                    div.span_18 {
+                        width: auto;
+                        position: absolute;
+                        background: $black;
+
+                        -moz-box-shadow: 12px 0 6px 1px $black;
+                        -webkit-box-shadow: 12px 0 6px 1px $black;
+                        box-shadow: 12px 0 6px 1px $black;
+                    }
+                }
+            }
+        }
+    }
+
+    &.scoreboard {
+        li {
+            list-style: none;
+            overflow: hidden;
+            margin: 2px 0;
+            font-size: 0.9em;
+            padding: 0 4px;
+
+            i.icon-heart {
+                margin-left: 4px;
+                color: #A00;
+            }
+
+            span.position {
+                text-align: center;
+                padding-right: 8px;
+               // width: 12px;
+                display: inline-block;
+            }
+
+            img {
+                width: 18px;
+            }
+
+            &.first, &.second, &.third {
+                background: $lighter_bg;
+                padding: 4px;
+                line-height: 16px;
+            }
+
+            &.second, &.third {
+                background: $light_bg;
+            }
+
+            &.third {
+                background: $bg;
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
+
+.no-js .widget.feed,
+.no-js .widget.adverts {
+    display: none;
+}
+
+@media ( max-width : 768px ) {
+    .widget.feed ul li .col {
+        width: auto;
+    }
+}

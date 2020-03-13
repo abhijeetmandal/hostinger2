@@ -1,0 +1,6 @@
+O:8:"stdClass":16:{s:8:"level_id";s:2:"15";s:4:"name";s:1:"2";s:5:"group";s:6:"PULLUP";s:5:"title";s:14:"PULLUP Level 2";s:9:"completed";s:1:"0";s:14:"completed_time";N;s:7:"started";N;s:8:"attempts";s:1:"0";s:16:"level_before_uri";s:16:"/levels/pullup/1";s:15:"level_after_uri";N;s:4:"data";a:2:{s:6:"reward";s:2:"20";s:11:"description";s:245:"Step#1: Take a camera and record your [b]10 pull-ups[/b].
+
+Step#2: Upload the video to below mentioned google-drive link.
+[url]https://drive.google.com/drive/folders/1EV2t3dfoNXaPxdYci4yuMpUsJckwTgHC?usp=sharing[/url]
+
+Step#3: Click submit.";}s:5:"count";s:1:"0";s:14:"last_completed";N;s:9:"last_user";N;s:15:"first_completed";N;s:10:"first_user";N;}

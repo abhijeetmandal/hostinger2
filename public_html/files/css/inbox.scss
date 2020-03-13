@@ -1,0 +1,207 @@
+.inbox {
+    .sticky-wrapper {
+        float: left;
+    }
+
+    .inbox-list {
+        max-height: 100%;
+        overflow: hidden;
+    
+        li {
+            &:hover,
+            &.active {
+                background: $bg;
+            }
+
+            a {
+                display: block;
+                height: 42px;
+                position: relative;
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+                &.new:before {
+                    content:"\a0";
+                    display: block;
+                    position: absolute;
+                    left: 42px;
+                    border-left: 3px solid $white; 
+                    height: 42px;
+                }
+
+                div {
+                    padding: 3px;
+                    color: $text;
+
+                    overflow: hidden;
+                    o-text-overflow: ellipsis;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+
+                    time {
+                        padding-left: 4px;
+                    }
+
+                    span {
+                        display: block;
+                        color: $white;
+
+                        overflow: hidden;
+                        o-text-overflow: ellipsis;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+
+                img {
+                    margin-right: 6px;
+                }
+            }
+        }
+
+        #conversation-options {
+            position: relative;
+            margin-bottom: 32px;
+
+            &:after {
+                border-top: 1px solid $dark;
+                content: "";
+                margin: 0 auto;
+                position: absolute;
+                bottom: -16px;
+                left: 0;
+                right: 0;
+                width: 95%;
+            }
+
+            .button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        #conversation-search {
+            border: 1px solid $dark;
+            height: 25px;
+            padding: 3px;
+            font-size: 0.9em;
+            margin-bottom: 6px;
+
+            i {
+                color: $dark;
+                font-size: 15px;
+                margin-top: 0px;
+                display: inline-block;
+            }
+
+            input {
+                width: 90%;
+                border: 0px;
+                height: 100%;
+                padding: 0px;
+                padding-right: 6px;
+
+                &:focus {
+                    @include box-shadow($black, 0);
+                }
+            }
+        }
+
+        .pagination {
+            li {
+                display: none;
+            }
+
+            li.left, li.right {
+                display: block;
+
+                a {
+                    height: auto !important;
+                }
+            }
+        }
+    }
+
+    .inbox-main {
+        .empty {
+            padding: 6px;
+            color: $lighter_bg;
+            font-weight: bold;
+            i {
+                display: block;
+                margin-bottom: 6px;
+                font-size: 3.5em;
+            }
+        }
+
+        ul.conversation {
+            li:not(.clean):not(.new-day) {
+                padding: 6px;
+
+                &:nth-child(odd) {
+                    background: darken($bg, 5%);
+                }
+
+                &.new {
+                    border-left: 3px solid $white;
+                }
+
+                > a {
+                    font-weight: bold;
+                    display: inline-block;
+                    margin-bottom: -12px;
+
+                    time {
+                        font-weight: normal;
+                    }
+                    img {
+                        margin: 0 8px 8px 0;
+                    }
+                }
+
+                > div {
+                    margin-left: 36px;
+
+                    .highlight {
+                        color: $green;
+                    }
+                }
+            }
+
+            margin-bottom: 12px;
+        }
+
+        li.new-day {
+            color: $dark;
+            margin-bottom: 4px;
+            position: relative;
+
+            &:before {
+                border-top: 1px solid $dark;
+                content: "";
+                margin: 0 auto;
+                position: absolute;
+                top: 9px;
+                left: 0;
+                right: 0;
+                width: 95%;
+            }
+
+            span {
+                background: $black;
+                padding: 0 10px;
+                position: relative;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+@media ( max-width : 768px ) {
+    .inbox div.inbox-list {
+        position: relative !important;
+        top: 0px !important;
+    }
+}

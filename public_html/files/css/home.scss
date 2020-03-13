@@ -1,0 +1,250 @@
+.home-module {
+    background: $bg;
+    margin-bottom: 12px;
+    padding: 12px 8px;
+
+    &.home-module-light {
+        background: $light_bg;
+
+        h2 {
+            font-size: 1.1em;
+        }
+    }
+
+    &.home-module-black {
+        background: $black;
+    }
+
+    a.remove {
+        margin-top: -8px;
+        font-size: 1.2em;
+
+        &:hover {
+            color: red;
+            text-decoration: none;
+        }
+    }
+
+    h3 {
+        margin: 0;
+        margin-bottom: 0.5em;
+    }
+
+    h3.no-margin {
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+        margin-top: 6px; 
+    }
+
+    .widget {
+        margin-bottom: 0;
+    }
+}
+
+.home-ticker {
+    position: relative;
+
+    ul {
+        list-style: none;    
+        position: relative;
+        overflow: hidden;
+        height: 17px;
+
+        li {
+            position: absolute;
+
+            top: 30px;
+
+            &:first-child {
+                top: 0;
+            }
+
+            -webkit-transition: top 0.9s ease-in-out;
+            -moz-transition: top 0.9s ease-in-out;
+            -o-transition: top 0.9s ease-in-out;
+            transition: top 0.9s ease-in-out;
+
+            .source {
+                font-weight: bold;
+                color: $green;
+                padding-right: 6px;
+            }
+
+            a {
+                color: $white;
+            }
+        }
+    }
+
+    .more {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 41px;
+        width: 41px;
+        background: $bg;
+        text-align: center;
+        line-height: 41px;
+        font-size: 2em;
+
+        &:hover {
+            text-decoration: none;
+            color: $bright_green;
+        }
+    }
+}
+
+
+.home-articles {
+    .thumbnail {
+        background: $bg;
+        margin-bottom: 0;
+        height: 225px;
+        margin-top: 0.5em;
+
+        &:hover {
+            background: darken($bg, 2%);
+        }
+    }
+
+    .external-articles {
+        ul {
+            overflow: hidden;
+            position: relative;
+
+            li {
+                -webkit-transition: left 1.2s ease-in-out;
+                -moz-transition: left 1.2s ease-in-out;
+                -o-transition: left 1.2s ease-in-out;
+            }
+
+            &.locator {
+                bottom: 0;
+
+                li {
+                    width: 6px; 
+                    height: 6px;
+                    @include border-radius(30%);
+
+                    background: $lighter_bg;
+                    display: inline-block;
+                    margin: 0 2px;
+
+                    &.active {
+                        background: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.forum-latest {
+    padding: 0;
+ 
+    td, th {
+        padding: 4px 6px;
+    }
+
+    thead {
+        background: $bg;
+        border-left: 2px solid $bg;
+    }
+
+    tbody tr {
+        border-left: 2px solid $light_bg;
+
+        &:hover {
+            background: $bg;
+            border-left: 2px solid $bg;
+        }
+
+        &.highlight {
+            border-left: 2px solid $green;
+
+            &:hover {
+                border-left: 2px solid lighten($green, 25%);
+            }
+        }
+
+        &.new {
+            border-left: 2px solid $lighter_bg;
+
+            &:hover {
+                border-left: 2px solid lighten($light_bg, 20%);
+            }
+        }
+
+        &.closed {
+            border-left: 2px solid $red;
+
+            &:hover {
+                border-left: 2px solid lighten($red, 25%);
+            }
+        }
+    }
+
+    span.medal {
+        font-size: 11px;
+        padding: 2px 4px;
+        text-align: center;
+        width: 28px;
+    }
+
+    span.medal-green {
+        background: #00b300;
+    }
+
+    .forum-latest span.medal-green.medal-green-dark {
+        background: #004d00;
+    }
+}
+
+.theme-light {
+    .forum-latest {
+        thead {
+            background: $lighter_bg;
+            border-left: 2px solid $lighter_bg;
+        }
+
+        tbody tr {
+            border-left: 1px solid $lighter_bg;
+
+            &.highlight {
+                border-left: 2px solid $green;
+
+                &:hover {
+                    border-left: 2px solid lighten($green, 25%);
+                }
+            }
+
+            &.new {
+                border-left: 2px solid $light_bg;
+
+                &:hover {
+                    border-left: 2px solid lighten($light_bg, 20%);
+                }
+            }
+
+            &.closed {
+                border-left: 2px solid $red;
+
+                &:hover {
+                    border-left: 2px solid lighten($red, 25%);
+                }
+            }
+        }
+    }
+
+    .home-ticker .more {
+        background: $lighter_bg;
+    }
+
+    .home-module.home-module-light {
+        background: $black;
+        border: 1px solid $lighter_bg;
+    }
+}
